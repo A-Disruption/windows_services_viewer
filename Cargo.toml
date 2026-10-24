@@ -1,0 +1,19 @@
+[package]
+name = "windows_services_viewer"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+iced = { version = "0.14.0", features = [
+    "tokio",
+    "lazy",
+    "advanced",
+    "debug",
+    "canvas",
+    "image",
+    "svg",
+    "markdown",
+    "qr_code",
+] }
+widgets = { git = "https://github.com/A-Disruption/widgets.git" , features = ["collapsible"] }
+windows = {version = "0.62.2", features = ["Win32_System_Services", "UI_Core", "Win32_Foundation",]}
